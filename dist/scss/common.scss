@@ -1,0 +1,315 @@
+@charset "UTF-8";
+@import url('./reset.css');
+@import url('./main.css');
+@import url('./contents.css');
+@import 'variables';
+@import 'mixin';
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+// intro
+#intro {
+  display: flex; justify-content: space-between; flex-direction: column;
+  height: 100vh; padding-top: 50px;
+  background: $light-navy url(../../images/bg-intro@2x.png) 50% no-repeat;
+  background-size: cover;
+  .header-intro {
+    text-align: center; color: #fff;
+    em {
+      margin-bottom: 5px;
+      font-size: 0.875em;font-weight: normal;
+      text-shadow: 0 0 20px #000;
+    }
+    h1 {
+      font-size: 2.750em;font-weight: normal;
+      text-shadow: 0 0 20px #000;
+    }
+  }
+  .logo-me {
+    width: 100px; height: 40px; margin: auto auto 50px;
+    background: url(../../images/logo-me@2x.png) 0 0 no-repeat;
+    background-size: contain;
+    text-indent: -9999px;
+  }
+}
+
+#main {
+  header {
+    height: 50px;
+  }
+}
+
+// 
+.wrap {
+  display: flex; flex-direction: column;
+  position: relative;
+  background: $bgDefult;
+}
+// header
+.header {
+  position: fixed;top: 0;left: 0;right: 0;z-index: 9999999;
+  @include flexCenter;
+  height: 50px;
+  text-align: center; 
+  background: $light-navy;
+  h1 {
+    font-weight: normal;color: #fff; font-size: 1.4rem;
+  }
+  .link-pre {
+    @include flexCenter;
+    position: absolute;top: 0;left: 0;
+    width: 50px;height: 100%;
+    color: #fff; font-size: 1.2rem; font-weight: 700;
+  }
+}
+
+// gnb
+#gnbMain {
+  flex-grow: 1;  
+  padding: 70px 0 70px; height: 100vh;
+  background: $light-navy;
+  ul {
+    @include flexAround; flex-wrap: wrap;
+    height: 100%;
+    li {
+      width: 43%; height: 30%;
+      &.on a {
+        background: $azul;
+        color: $white;
+      }
+    }
+    a {
+      @include flexCenter; flex-direction: column;
+      height: 100%;
+      @include boxShadow;
+    }
+    img {
+      margin-bottom: 15px;
+      transform: scale(.8);
+    }
+  }
+}
+
+.snb {
+  height: 100vh;
+  li {
+    position: relative;
+    border-bottom: 1px solid $line;
+    i {
+      margin: -2px 10px 0 0;
+      font-size: 24px;
+      vertical-align: middle;
+    }
+    &::after {
+      position: absolute;top: 19px;right: 10px;
+      font-family: 'Line Awesome Free';
+      font-weight: 900; font-size: 20px;
+      content: "\f105";
+      color: $azul;
+    }
+  }
+  a {
+    display: block; 
+    height: 100%;
+    padding: 20px 10px;
+    font-size: 1.125em;
+  }
+}
+
+// bottomMenu
+.bottom-menu {
+  @include flexAround;
+  position: fixed;bottom: 0;left: 0;right: 0;z-index: 9999999;
+  height: 50px;
+  background: $white;
+  a {
+    @include flexCenter;
+    width: 30%;
+    text-align: center;
+    &.bm-work {
+      i, span {
+        color: $azul;
+      }
+    }
+    &.bm-leave {
+      i, span {
+        color: $tomato;
+      }
+    }
+  }
+  i {
+    display: block;
+    // margin: auto;
+    margin-right: 5px;
+    font-size: 2rem;font-weight: 700;
+    &.la-bars {
+      color: $light-navy;
+    }
+  }
+  span {
+    font-size: 14px;
+  }
+}
+
+// comm
+.btn-g {
+  @include flexBetween;
+  padding: 10px 0 20px;
+  .btn- {
+    width: 47%; padding: 10px 20px;
+    border:none; color: #fff;
+    &.btn-blue {
+      background: $azul;
+    }
+    &.btn-gray {
+      background: $gray7;
+    }
+  }
+}
+.btn-s {
+  padding: 3px 7px;
+  font-size: 0.8rem; color: #fff;
+  border: none;
+  &.btn-red {
+    background: $tomato;
+    i {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 1.3em;
+    }
+  }
+  &.btn-gray {
+    background: $gray9;
+    box-shadow: none;
+  }
+}
+.link-map {
+  position: absolute;top: 0;right: 0;
+}
+
+// container
+.container {
+  overflow-y: auto;
+  display: flex; flex-direction: column; flex-grow: 1; 
+  padding: 70px 4% 50px; height: 100vh;
+  .cont- {
+    flex-grow: 1;
+  }
+}
+
+.tit- {
+  margin-bottom: 20px;
+  font-weight: 700; font-size: 1.500em;
+  i {
+    display: inline-block;
+    vertical-align: middle;
+    color: $azul; font-size: 2em; font-weight: 700;
+  }
+}
+
+.lst-my {
+  position: relative;
+  margin-bottom: 20px;
+  dt {
+    margin-bottom: 8px;
+    font-weight: 700; font-size: 1.1rem;
+  }
+  dd {
+    @include boxShadow;
+    padding:  15px;
+    border-radius: 3px;
+    text-align: center;
+    &.txt {
+      text-align: left;
+    }
+    .textarea- {
+      width: 100%;height: 100px; padding: 0;
+      border: none;
+      resize: none;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.lst-work {
+  li {
+    @include flexBetween;
+    width: 100%; margin-bottom: 3px;
+  }
+  time {
+    width: 20%;
+    text-align: left;
+  }
+  strong {
+    width: 60%;
+    text-align: left;
+    @include ell;
+  }
+  input {
+    width: 15%;
+  }
+}
+
+.lst-report {
+  
+  li {
+    @include flexBetween;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray9;
+    .ico- {
+      overflow: hidden; position: relative; 
+      width: 20%;
+      border-radius: 3px;
+      color: #fff; text-align: center;
+      &.ico-work {
+        padding: 3px 5px;
+        background: $azul;
+      }
+      &.ico-leave {
+        padding: 3px 5px;
+        background: $tomato;
+      }
+      &.thumb-work {
+        height: 43px;
+        &::after {
+          @include borderPos;
+        }
+      }
+      img {
+        position: absolute;top: 0;left: 0;
+        width: 100%; height: 100%;
+      }
+
+    }
+    
+    .thumb-work {
+      width: 20%;
+      border-radius: 3px;
+    }
+    .txt {
+      display: flex; flex-direction: column;
+      width: 55%;
+      strong {
+        @include ell;
+      }
+      time {
+        @include ell;
+        font-size: 0.8rem;
+      }
+    }
+    em {
+      width: 12%;
+      color: $tomato;
+    }
+  }
+}
+
+.sel- {
+  width: 100%;height: 50px; 
+  margin-bottom: 20px; padding: 0 15px;
+}
+
+#data {
+  border : none;
+}

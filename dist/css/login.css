@@ -1,0 +1,118 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.wrap-login {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;justify-content: center;align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: #303036;
+  color: #727273;
+}
+.wrap-login #wrap {
+  width: 86%;
+}
+.wrap-login header {
+  background-color: transparent;
+  border-bottom: none;
+}
+.wrap-login header a {
+  color: #727273;
+}
+.wrap-login #Logo {
+  display: block;
+  width: 174px;
+  height: 30px;
+  margin: 0 auto;
+  background: url(../imgs/logo.svg) 0 0 no-repeat;
+  text-indent: -9999px;
+}
+.wrap-login #container {
+  /* width: 86%; */
+}
+
+.service {
+  margin: 11px 0 52px;
+  font-size: 1.153em;text-align: center;color: #727273;
+  letter-spacing: -.4px;
+}
+.service span {display: inline-block;margin: 0 7px 0 9px;}
+.service strong {
+  display: inline-block;
+  color: #95999e;font-weight: normal;
+}
+.login_form {
+  padding-top: 3px;
+}
+.input_row {
+	display: block;position:relative;
+	height:55px;
+	margin:0 auto 15px;
+	padding:10px 35px 10px 15px;
+	border-radius: 0.5rem;
+	background:#45454a;
+  box-sizing: border-box;
+}
+.input_box {
+	display:block;
+	overflow:hidden
+}
+.lbl {
+  /* display: none; */
+  font-weight: 400;font-size: 1.307em;letter-spacing: 2px;line-height: 1.1;
+	position:absolute;z-index:10;top:19px;	left:18px;
+	color:#fff; font-weight: normal;
+}
+.int {
+	font-size:15px;
+	line-height:16px;
+	position:relative;
+	z-index:9;
+	width:100%;
+	height:37px;
+	padding:7px 0 6px;
+	color:#fff;
+	border:none;
+	background:#45454a;
+	-webkit-appearance:none
+}
+.error {
+  display: none;
+	font-size:12px;
+	line-height:16px;
+	margin:-2px 0 12px 50px;
+	color:#ff1616
+}
+.ie7 .lbl,.ie8 .lbl,.ie9 .lbl {
+	z-index:10
+}
+.wrg {
+	position:absolute;
+	z-index:1000;
+	top:18px;
+	right:13px;
+	overflow:hidden;
+	width:19px;
+	height:19px;
+	margin:0;
+	padding:0;
+	cursor:pointer;
+	/* text-indent:-999px; */
+	border:0;
+	background-color:transparent;
+	background-position:-1px -370px
+}
+.btn_global {
+	display:block;
+	width:100%;height:55px;
+	margin:12px auto 0;padding-top:1px;
+	border:none;border-radius: 0.5rem;background-color:#005DA0;
+	cursor:pointer;
+	text-align:center;color:#fff;	font: 700 1.538em/54px 'Helvetica Neue Light';letter-spacing: 1px;
+	-webkit-appearance:none;
+}
+.btn_global:active,.btn_global:hover,.btn_global:link {
+	text-decoration:none;
+	color:#fff
+}
